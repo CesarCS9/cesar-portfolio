@@ -7,6 +7,9 @@ const header = document.querySelector("header");
 
 const navItems = document.querySelectorAll('.nav-links a');
 
+const emailButtons = document.querySelectorAll(".copy-email-btn");
+const email = 'cescastillo9@gmail.com';
+
 // ======= MENU BURGER ======= //
 
 function openMenu() {
@@ -45,4 +48,43 @@ menuToggle.addEventListener( 'click', () => {
 
 navItems.forEach((navItem) => {
     navItem.addEventListener('click', closeMenu);
+});
+
+
+// ======= COPY EMAIL ======= //
+
+async function copyEmail () {
+    try {
+        await navigator.clipboard.writeText(email);
+        showToast('Email copied!');
+    } catch (error) {
+        showToast('Could not copy email');
+    }
+}
+
+// ======= TOAST ======= //
+
+function showToast(message) {
+    const toast = document.createElement('div');
+
+    toast.classList.add('toast');
+    toast.textContent = message;
+
+    document.body.appendChild(toast);
+
+    setTimeout(()=> {
+        toast.classList.add('show');
+    }, 10);
+
+    setTimeout(()=> {
+        toast.classList.remove('show');
+
+        setTimeout(()=> {
+            toast.remove();
+        }, 300);
+    }, 2500);
+}
+
+emailButtons.forEach((button) => {
+    button.addEventListener("click", copyEmail);
 });
