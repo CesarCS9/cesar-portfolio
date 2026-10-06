@@ -121,6 +121,18 @@ nav {
   font-weight: 600;
 }
 
+.link-text {
+  display: flex;
+  flex-direction: column;
+  height: 4.5rem;
+  overflow: hidden;
+}
+
+.link-text span {
+  line-height: 4.5rem;
+  transition: transform 0.35s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+
 .cv-btn {
   display: none;
   text-decoration: none;
@@ -231,7 +243,6 @@ nav {
   align-items: center;
   justify-content: center;
   gap: 1rem;
-  
 }
 
 .hero-github-btn {
@@ -255,11 +266,11 @@ nav {
 }
 
 .hero-icons i {
-    transition: 0.3s ease;
+  transition: 0.3s ease;
 }
 
 .hero-icons i:hover {
-    color: var(--color-white);
+  color: var(--color-white);
 }
 
 /* ===== PROJECTS ======*/
@@ -447,7 +458,7 @@ nav {
 }
 
 .background-btn-hover-text {
-    display: none;
+  display: none;
 }
 
 /* ===== FOOTER ===== */
@@ -487,36 +498,36 @@ footer {
 
 .footer-links a:hover,
 .email-btn:hover {
-    color: var(--color-yellow);
+  color: var(--color-yellow);
 }
 
 /* ==== TOAST ==== */
 
 .toast {
-    position: fixed;
-    bottom: 2rem;
-    right: 2rem;
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
 
-    padding: 1rem 1.5rem;
+  padding: 1rem 1.5rem;
 
-    background-color: var(--color-white);
-    color: var(--color-black);
+  background-color: var(--color-white);
+  color: var(--color-black);
 
-    border-radius: 0.3rem;
+  border-radius: 0.3rem;
 
-    opacity: 0;
-    transform: translateY(-1rem);
+  opacity: 0;
+  transform: translateY(-1rem);
 
-    transition:
-        opacity 0.3s ease,
-        transform 0.3s ease;
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
 
-    z-index: 1000;
+  z-index: 1000;
 }
 
 .toast.show {
-    opacity: 1;
-    transform: translateY(0);
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* ===== RESPONSIVE ===== */
@@ -720,6 +731,18 @@ footer {
   }
   .nav-links {
     gap: 5rem;
+  }
+
+  .link-text {
+    height: 2rem;
+  }
+
+  .link-text span {
+    line-height: 2rem;
+  }
+
+  a:hover .link-text span {
+    transform: translateY(-100%);
   }
 
   .cv-btn-hover-text {
@@ -945,12 +968,12 @@ footer {
 
   /* ===== BACKGROUND BUTTON HOVER ===== */
 
-.background-btn {
+  .background-btn {
     position: relative;
     overflow: hidden;
-}
+  }
 
-.background-btn-hover-text {
+  .background-btn-hover-text {
     position: absolute;
     top: 0;
     left: 0;
@@ -968,26 +991,26 @@ footer {
 
     transform: translateY(100%);
     transition: transform 0.4s ease;
-}
+  }
 
-.background-btn span:first-child {
+  .background-btn span:first-child {
     position: relative;
     z-index: 2;
 
     color: var(--color-white);
 
     transition: transform 0.4s ease;
-}
+  }
 
-.background-btn:hover span:first-child {
+  .background-btn:hover span:first-child {
     transform: translateY(-100%);
-}
+  }
 
-.background-btn:hover .background-btn-hover-text {
+  .background-btn:hover .background-btn-hover-text {
     transform: translateY(0);
-}
+  }
 
-.background-btn::before {
+  .background-btn::before {
     content: "";
 
     position: absolute;
@@ -1005,9 +1028,9 @@ footer {
     z-index: 1;
 
     transition: bottom 0.5s ease;
-}
+  }
 
-.background-btn:hover::before {
+  .background-btn:hover::before {
     bottom: -80px;
-}
+  }
 }
