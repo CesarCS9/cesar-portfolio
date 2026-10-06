@@ -10,6 +10,8 @@ const navItems = document.querySelectorAll('.nav-links a');
 const emailButtons = document.querySelectorAll(".copy-email-btn");
 const email = 'cescastillo9@gmail.com';
 
+const hiddenElements = document.querySelectorAll('.hidden-elements');
+
 // ======= MENU BURGER ======= //
 
 function openMenu() {
@@ -88,3 +90,22 @@ function showToast(message) {
 emailButtons.forEach((button) => {
     button.addEventListener("click", copyEmail);
 });
+
+// ======= SCROLL ANIMATION ======= //
+
+// Create an observer to detect when sections enter the viewport
+const observer = new IntersectionObserver(
+    (entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("show-elements");
+            }
+        });
+    },
+    {
+        // Trigger the animation slightly before the element reaches the bottom of the viewport
+        rootMargin: "0px 0px -10% 0px",
+    }
+);
+
+hiddenElements.forEach((el) => observer.observe(el));

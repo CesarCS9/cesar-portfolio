@@ -146,6 +146,21 @@ nav {
   display: none;
 }
 
+/* ==== SCROLL ANIMATION ==== */
+
+.hidden-elements {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translatex(-100%);
+  transition: all 1s;
+}
+
+.show-elements {
+  opacity: 1;
+  filter: blur(0);
+  transform: translatex(0);
+}
+
 /* ===== HERO ===== */
 
 .hero {
