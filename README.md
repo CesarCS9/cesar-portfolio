@@ -80,6 +80,17 @@ AI suggestions were reviewed, tested and adapted before being used. I remained r
 
 AI was not used to generate the portfolio or major components as a complete solution. The code and implementation were developed and adapted by me.
 
+## Credits
+
+### Learning Resources
+
+- Scroll reveal animation: Based on a tutorial by [Beyond Fireship](https://www.youtube.com/watch?v=T33NN_pPeNI&list=LL&index=3). The implementation was adapted and integrated into my own portfolio.
+- Button hover effects: Based on a tutorial by [Online Tutorials](https://www.youtube.com/watch?v=WXoMqxnAQwE). The effects were adapted and integrated into my own portfolio.
+
+### Images
+
+- Hero background image: [Unsplash](https://unsplash.com/es/fotos/plastico-redondo-amarillo-sobre-mesa-de-madera-marron-Kt3ecUwgOts)
+
 ## Author
 
 Cesar Castillo
