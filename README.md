@@ -66,7 +66,19 @@ Open the project in Visual Studio Code and use a local development server such a
 
 ## AI Usage
 
-AI tools were used during the development process for guidance, debugging, problem-solving and improving the implementation of certain features.
+AI tools, mainly ChatGPT, were used during the development of this portfolio as a learning and development support tool.
+
+AI was used for:
+- Explaining HTML, CSS and JavaScript concepts
+- Troubleshooting and debugging
+- Discussing possible solutions and development approaches
+- Accessibility and responsive design guidance
+- Improving documentation and non-technical text
+- Reviewing and refining parts of the implementation
+
+AI suggestions were reviewed, tested and adapted before being used. I remained responsible for the implementation and final technical decisions.
+
+AI was not used to generate the portfolio or major components as a complete solution. The code and implementation were developed and adapted by me.
 
 ## Author
 
